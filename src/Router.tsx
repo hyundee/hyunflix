@@ -28,22 +28,22 @@ const router = createHashRouter([
         ],
       },
       {
-        path: "tv",
-        element: <Series />,
-        children: [
-          {
-            path: "detail/:seriesId",
-            element: <TvDetails />,
-          },
-        ],
-      },
-      {
         path: "movie",
         element: <Movie />,
         children: [
           {
             path: "detail/:movieId",
             element: <MovieDetails />,
+          },
+        ],
+      },
+      {
+        path: "tv",
+        element: <Series />,
+        children: [
+          {
+            path: "detail/:seriesId",
+            element: <TvDetails />,
           },
         ],
       },
