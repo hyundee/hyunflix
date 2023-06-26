@@ -8,62 +8,67 @@ import Error from "./Error";
 import MovieDetails from "./routes/MovieDetails";
 import TvDetails from "./routes/TvDetails";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Root />,
+      children: [
+        {
+          path: "",
+          element: <Home />,
+          children: [
+            {
+              path: "movie/:movieId",
+              element: <MovieDetails />,
+            },
+            {
+              path: "tv/:seriesId",
+              element: <TvDetails />,
+            },
+          ],
+        },
+        {
+          path: "tv",
+          element: <Series />,
+          children: [
+            {
+              path: "detail/:seriesId",
+              element: <TvDetails />,
+            },
+          ],
+        },
+        {
+          path: "movie",
+          element: <Movie />,
+          children: [
+            {
+              path: "detail/:movieId",
+              element: <MovieDetails />,
+            },
+          ],
+        },
+        {
+          path: "search",
+          element: <Search />,
+          children: [
+            {
+              path: "movie/:movieId",
+              element: <MovieDetails />,
+            },
+            {
+              path: "tv/:seriesId",
+              element: <TvDetails />,
+            },
+          ],
+        },
+      ],
+      errorElement: <Error />,
+    },
+  ],
   {
-    path: "/",
-    element: <Root />,
-    children: [
-      {
-        path: "",
-        element: <Home />,
-        children: [
-          {
-            path: "movie/:movieId",
-            element: <MovieDetails />,
-          },
-          {
-            path: "tv/:seriesId",
-            element: <TvDetails />,
-          },
-        ],
-      },
-      {
-        path: "tv",
-        element: <Series />,
-        children: [
-          {
-            path: "detail/:seriesId",
-            element: <TvDetails />,
-          },
-        ],
-      },
-      {
-        path: "movie",
-        element: <Movie />,
-        children: [
-          {
-            path: "detail/:movieId",
-            element: <MovieDetails />,
-          },
-        ],
-      },
-      {
-        path: "search",
-        element: <Search />,
-        children: [
-          {
-            path: "movie/:movieId",
-            element: <MovieDetails />,
-          },
-          {
-            path: "tv/:seriesId",
-            element: <TvDetails />,
-          },
-        ],
-      },
-    ],
-    errorElement: <Error />,
-  },
-]);
+    basename: "process.env.PUBLIC_URL",
+  }
+);
 
 export default router;
