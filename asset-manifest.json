@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/hyunflix/static/js/main.00ca186c.js",
+    "main.js": "/hyunflix/static/js/main.3b8767f6.js",
     "static/media/logo_1.png": "/hyunflix/static/media/logo_1.d5a39947f7882596e517.png",
     "index.html": "/hyunflix/index.html",
     "static/media/Close.svg": "/hyunflix/static/media/Close.cb158475bf5d95a679885814b136722f.svg",
     "static/media/Check.svg": "/hyunflix/static/media/Check.024b911de63605b6312f9ad7a9087ddf.svg",
     "static/media/Plus.svg": "/hyunflix/static/media/Plus.cb1bb802fa9ab1703e84229c7ec3d66c.svg",
     "static/media/Play.svg": "/hyunflix/static/media/Play.293755772ac7711c3ab7923e1ae081b4.svg",
-    "main.00ca186c.js.map": "/hyunflix/static/js/main.00ca186c.js.map"
+    "main.3b8767f6.js.map": "/hyunflix/static/js/main.3b8767f6.js.map"
   },
   "entrypoints": [
-    "static/js/main.00ca186c.js"
+    "static/js/main.3b8767f6.js"
   ]
 }
