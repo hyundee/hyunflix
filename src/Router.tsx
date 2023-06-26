@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Root from "./Root";
 import Home from "./routes/Home";
 import Series from "./routes/Series";
@@ -8,7 +8,7 @@ import Error from "./Error";
 import MovieDetails from "./routes/MovieDetails";
 import TvDetails from "./routes/TvDetails";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
